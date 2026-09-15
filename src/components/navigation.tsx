@@ -26,7 +26,7 @@ export function Navigation() {
         <span className="brand-name">AMRITANSH<br />JAISWAL</span>
       </a>
       <button
-        className="menu-toggle"
+        className="button button-secondary menu-toggle icon-button"
         type="button"
         aria-label={open ? "Close primary navigation" : "Open primary navigation"}
         aria-expanded={open}
@@ -34,7 +34,6 @@ export function Navigation() {
         onClick={() => setOpen(!open)}
       >
         {open ? <X size={18} /> : <Menu size={18} />}
-        <span>{open ? "Close" : "Menu"}</span>
       </button>
       <nav id="primary-navigation" className={`nav-links ${open ? "nav-open" : ""}`} aria-label="Primary navigation">
         {navigation.map((item) => (
@@ -43,7 +42,7 @@ export function Navigation() {
           </a>
         ))}
         <ThemeToggle />
-        <a className="nav-contact chamfered" href="#contact" onClick={() => setOpen(false)}>Start a conversation <span>↗</span></a>
+        <a className="button button-primary nav-contact" href="#contact" onClick={() => setOpen(false)}>Start a conversation</a>
       </nav>
     </header>
   );

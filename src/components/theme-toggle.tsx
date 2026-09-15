@@ -11,14 +11,13 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="theme-toggle chamfered"
+      className="button button-secondary theme-toggle icon-button"
       type="button"
       aria-label={`Switch to ${nextPreference} theme`}
       title={`${label}. Switch to ${nextPreference} theme`}
       onClick={() => setPreference(nextPreference)}
     >
       <Icon size={14} aria-hidden="true" />
-      <span>{label}</span>
     </button>
   );
 }

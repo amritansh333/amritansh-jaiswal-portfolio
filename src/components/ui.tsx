@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type Tone = "neutral" | "red" | "gold" | "light";
 
@@ -25,20 +25,23 @@ export function Panel({
   className?: string;
   accent?: boolean;
 }) {
-  return <div className={`panel ${accent ? "panel-accent" : ""} ${className}`}>{children}</div>;
+  return <div className={`panel chamfered ${accent ? "panel-accent" : ""} ${className}`}>{children}</div>;
 }
 
 export function Button({
   children,
   href,
   variant = "primary",
+  className = "",
+  ...buttonProps
 }: {
   children: ReactNode;
   href?: string;
   variant?: "primary" | "secondary";
-}) {
+  className?: string;
+} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "children">) {
   const content = <>{children}<span aria-hidden="true">↗</span></>;
   return href
-    ? <a className={`button button-${variant}`} href={href}>{content}</a>
-    : <span className={`button button-${variant}`}>{content}</span>;
+    ? <a className={`button button-${variant} ${className}`} href={href}>{content}</a>
+    : <button className={`button button-${variant} ${className}`} type={buttonProps.type ?? "button"} {...buttonProps}>{content}</button>;
 }
