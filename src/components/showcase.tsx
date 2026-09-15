@@ -42,7 +42,6 @@ export function Showcase() {
         <div className="terminal-window"><div className="terminal-bar"><span className="terminal-dots"><i /><i /><i /></span><span>AJ_COMMAND_CENTER / PREVIEW</span><span>STATUS: <b>READY</b></span></div><div className="terminal-body"><div className="terminal-line"><span className="line-number">01</span><Terminal size={17} /><span>initialise --identity amritansh-jaiswal</span></div><div className="terminal-line terminal-output"><span className="line-number">02</span><span className="output-mark">↳</span><span>Building clear interfaces for complex ideas.</span></div><div className="terminal-line"><span className="line-number">03</span><GitBranch size={17} /><span>git status --short</span></div><div className="terminal-line terminal-output"><span className="line-number">04</span><span className="output-mark">↳</span><span className="text-red">ready to ship / no loose ends</span></div><div className="terminal-cursor"><span className="line-number">05</span><span>_</span></div></div></div>
         <div className="icon-index" aria-label="Technology index">{[Code2, Database, Globe2, Workflow, Binary, ScanLine, Activity].map((Icon, index) => <div key={index}><Icon size={19} /><span>0{index + 1}</span></div>)}</div>
       </section>
-      <footer className="site-footer section-shell" id="contact"><span>AJ / DESIGN SYSTEM 001</span><span>ENGINEERED IN INDIA <span className="text-red">●</span></span><span>SCROLL TO EXPLORE ↑</span></footer>
     </main>
   );
 }

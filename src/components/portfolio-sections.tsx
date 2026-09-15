@@ -5,6 +5,8 @@ import { achievements } from "@/data/achievements";
 import { certifications } from "@/data/certifications";
 import { education } from "@/data/education";
 import { experience } from "@/data/experience";
+import { Projects } from "@/components/projects";
+import { Contact } from "@/components/contact";
 import { Divider, Label, Panel } from "@/components/ui";
 
 const skillIcons = [Braces, Layers3, Server, Database, Smartphone, GitBranch];
@@ -143,6 +145,8 @@ export function PortfolioSections() {
           </div>
         </section>
       </section>
+      <Projects />
+      <Contact />
     </>
   );
 }

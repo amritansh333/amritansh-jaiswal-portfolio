@@ -4,6 +4,8 @@ export const navigation = [
   { label: "Skills", href: "#skills", index: "03" },
   { label: "Interface", href: "#interface", index: "04" },
   { label: "Experience", href: "#experience", index: "05" },
+  { label: "Projects", href: "#projects", index: "06" },
+  { label: "Contact", href: "#contact", index: "07" },
 ];
 
 export const systemMetadata = [
