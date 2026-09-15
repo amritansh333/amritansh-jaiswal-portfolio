@@ -6,7 +6,7 @@ const iconMap = { radio: Radio, layers: Layers3, zap: Zap };
 
 export function Showcase() {
   return (
-    <main id="top">
+    <>
       <section className="hero section-shell" id="system">
         <div className="hero-kicker"><Label tone="red">Portfolio / Design System 001</Label><span className="signal-line" /></div>
         <div className="hero-grid">
@@ -40,8 +40,8 @@ export function Showcase() {
       <section className="section-shell output-section" id="output">
         <div className="section-heading"><Label tone="red">Output / System preview</Label><h2>MAKE IT<br /><span>USEFUL.</span></h2></div>
         <div className="terminal-window"><div className="terminal-bar"><span className="terminal-dots"><i /><i /><i /></span><span>AJ_COMMAND_CENTER / PREVIEW</span><span>STATUS: <b>READY</b></span></div><div className="terminal-body"><div className="terminal-line"><span className="line-number">01</span><Terminal size={17} /><span>initialise --identity amritansh-jaiswal</span></div><div className="terminal-line terminal-output"><span className="line-number">02</span><span className="output-mark">↳</span><span>Building clear interfaces for complex ideas.</span></div><div className="terminal-line"><span className="line-number">03</span><GitBranch size={17} /><span>git status --short</span></div><div className="terminal-line terminal-output"><span className="line-number">04</span><span className="output-mark">↳</span><span className="text-red">ready to ship / no loose ends</span></div><div className="terminal-cursor"><span className="line-number">05</span><span>_</span></div></div></div>
-        <div className="icon-index" aria-label="Technology index">{[Code2, Database, Globe2, Workflow, Binary, ScanLine, Activity].map((Icon, index) => <div key={index}><Icon size={19} /><span>0{index + 1}</span></div>)}</div>
+        <div className="icon-index" aria-hidden="true">{[Code2, Database, Globe2, Workflow, Binary, ScanLine, Activity].map((Icon, index) => <div key={index}><Icon size={19} /><span>0{index + 1}</span></div>)}</div>
       </section>
-    </main>
+    </>
   );
 }

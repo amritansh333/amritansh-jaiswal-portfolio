@@ -4,8 +4,10 @@ import { PortfolioSections } from "@/components/portfolio-sections";
 export default function Home() {
   return (
     <>
-      <Showcase />
-      <PortfolioSections />
+      <main id="top">
+        <Showcase />
+        <PortfolioSections />
+      </main>
       <footer className="site-footer section-shell">
         <span>AJ / DESIGN SYSTEM 001</span>
         <span>ENGINEERED IN INDIA <span className="text-red">●</span></span>

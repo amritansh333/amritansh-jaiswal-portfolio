@@ -30,17 +30,15 @@ export function Panel({
 
 export function Button({
   children,
-  href = "#",
+  href,
   variant = "primary",
 }: {
   children: ReactNode;
   href?: string;
   variant?: "primary" | "secondary";
 }) {
-  return (
-    <a className={`button button-${variant}`} href={href}>
-      {children}
-      <span aria-hidden="true">↗</span>
-    </a>
-  );
+  const content = <>{children}<span aria-hidden="true">↗</span></>;
+  return href
+    ? <a className={`button button-${variant}`} href={href}>{content}</a>
+    : <span className={`button button-${variant}`}>{content}</span>;
 }
