@@ -1,6 +1,10 @@
 import { ArrowUpRight, Binary, Braces, Database, GitBranch, Layers3, Radio, Server, Smartphone } from "lucide-react";
 import { aboutProfile } from "@/data/about";
 import { skillGroups } from "@/data/skills";
+import { achievements } from "@/data/achievements";
+import { certifications } from "@/data/certifications";
+import { education } from "@/data/education";
+import { experience } from "@/data/experience";
 import { Divider, Label, Panel } from "@/components/ui";
 
 const skillIcons = [Braces, Layers3, Server, Database, Smartphone, GitBranch];
@@ -57,6 +61,87 @@ export function PortfolioSections() {
             );
           })}
         </div>
+      </section>
+
+      <section className="section-shell journey-section" id="experience" aria-labelledby="experience-heading">
+        <div className="section-heading">
+          <Label tone="red">Journey / Verified record</Label>
+          <p>Internships, learning milestones, and signals of consistent practice.</p>
+          <h2 id="experience-heading">BUILD<br /><span className="accent">THE RANGE.</span></h2>
+        </div>
+        <Divider label="03 / EXPERIENCE" />
+        <div className="experience-list">
+          {experience.map((item) => (
+            <article className="experience-entry" key={item.id}>
+              <div className="experience-index mono-note">{item.id}</div>
+              <div className="experience-copy">
+                <p className="record-period">{item.period}</p>
+                <h3>{item.role}</h3>
+                <p className="record-organization">{item.organization}</p>
+                <p className="record-summary">{item.summary}</p>
+                <p className="record-detail">{item.details}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="record-grid">
+          <section className="record-column" id="education" aria-labelledby="education-heading">
+            <div className="subsection-heading">
+              <Label tone="gold">Education</Label>
+              <h3 id="education-heading">FOUNDATION<span className="accent">.</span></h3>
+            </div>
+            <div className="education-list">
+              {education.map((item) => (
+                <article className="education-entry" key={item.qualification}>
+                  <div>
+                    <h4>{item.qualification}</h4>
+                    <p>{item.institution}</p>
+                  </div>
+                  <div className="education-meta">
+                    <span>{item.period}</span>
+                    <strong>{item.result}</strong>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="record-column" id="certifications" aria-labelledby="certifications-heading">
+            <div className="subsection-heading">
+              <Label tone="gold">Certifications / Training</Label>
+              <h3 id="certifications-heading">CREDENTIALS<span className="accent">.</span></h3>
+            </div>
+            <div className="certification-list">
+              {certifications.map((item) => (
+                <article className="certification-entry" key={item.title}>
+                  <div className="certification-top">
+                    <h4>{item.title}</h4>
+                    <span className="record-period">{item.date}</span>
+                  </div>
+                  <p className="record-organization">{item.issuer}</p>
+                  <p className="record-detail">{item.detail}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <section className="achievement-section" id="achievements" aria-labelledby="achievements-heading">
+          <div className="subsection-heading">
+            <Label tone="red">Achievements / Signals</Label>
+            <h3 id="achievements-heading">SHOW<br /><span className="accent">UP.</span></h3>
+          </div>
+          <div className="achievement-list">
+            {achievements.map((item, index) => (
+              <Panel className="achievement-entry" key={item.title}>
+                <span className="mono-note">0{index + 1}</span>
+                <h4>{item.title}</h4>
+                <p>{item.detail}</p>
+              </Panel>
+            ))}
+          </div>
+        </section>
       </section>
     </>
   );
