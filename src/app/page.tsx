@@ -9,7 +9,7 @@ export default function Home() {
         <PortfolioSections />
       </main>
       <footer className="site-footer section-shell">
-        <span>AJ / DESIGN SYSTEM 001</span>
+        <span>AJ / SOFTWARE ENGINEER</span>
         <span>ENGINEERED IN INDIA <span className="text-red">●</span></span>
         <a href="#top">SCROLL TO EXPLORE ↑</a>
       </footer>

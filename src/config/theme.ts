@@ -16,9 +16,9 @@ export const theme = {
     muted: "#9a978e",
   },
   typography: {
-    display: "var(--font-display)",
-    body: "var(--font-body)",
-    mono: "var(--font-mono)",
+    display: '"Courier New", Courier, monospace',
+    body: '"Courier New", Courier, monospace',
+    mono: '"Courier New", Courier, monospace',
   },
   motion: {
     fast: "140ms",

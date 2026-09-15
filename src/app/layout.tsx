@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Geist, IBM_Plex_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { Navigation } from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const display = Archivo_Black({ subsets: ["latin"], variable: "--font-display", weight: "400", display: "swap" });
-const body = Geist({ subsets: ["latin"], variable: "--font-body", display: "swap" });
-const mono = IBM_Plex_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"], display: "swap" });
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://amritanshjaiswal.vercel.app/"),
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   title: {
     default: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
     template: "%s | Amritansh Jaiswal",
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     ],
   };
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
       <body>
         <ThemeProvider>

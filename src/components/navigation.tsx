@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navigation } from "@/data/site";
@@ -17,9 +18,11 @@ export function Navigation() {
   }, []);
 
   return (
-    <header className="site-header">
+    <header className="site-header chamfered">
       <a className="brand" href="#top" aria-label="Amritansh Jaiswal home">
-        <span className="brand-mark">AJ</span>
+        <span className="brand-mark chamfered">
+          <Image src="/logo.png" alt="" width={36} height={36} priority />
+        </span>
         <span className="brand-name">AMRITANSH<br />JAISWAL</span>
       </a>
       <button
@@ -40,7 +43,7 @@ export function Navigation() {
           </a>
         ))}
         <ThemeToggle />
-        <a className="nav-contact" href="#contact" onClick={() => setOpen(false)}>Start a conversation <span>↗</span></a>
+        <a className="nav-contact chamfered" href="#contact" onClick={() => setOpen(false)}>Start a conversation <span>↗</span></a>
       </nav>
     </header>
   );
