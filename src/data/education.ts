@@ -8,13 +8,11 @@ export const education = [
   {
     qualification: "Class XII",
     institution: "CBSE · Kanya Kubja Public School, Kanpur",
-    period: "May 2022",
-    result: "64.2%",
+    period: "May 2022"
   },
   {
     qualification: "Class X",
     institution: "CBSE · Kanya Kubja Public School, Kanpur",
-    period: "May 2020",
-    result: "90%",
+    period: "May 2020"
   },
 ] as const;

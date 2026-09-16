@@ -49,15 +49,14 @@ export default function Home() {
           <div ref={terminalFooterRef} className="terminal-footer chamfered">
             <div className="terminal-footer-bar">
               <span className="terminal-dots" aria-hidden="true"><i /><i /><i /></span>
-              <span>portfolio@amritansh.jaiswal:~</span>
-              <span>SESSION / 2026.09</span>
+              <span>~:portfolio:~</span>
             </div>
             <div className="terminal-footer-body">
               <div>
                 <p className="terminal-prompt">$ whoami</p>
-                <p className="terminal-identity">amritansh jaiswal</p>
+                <a href="#top" className="terminal-identity">amritansh jaiswal</a>
                 <p className="terminal-muted">software engineer // full-stack developer</p>
-                <p className="terminal-prompt terminal-build-prompt">$ echo &quot;BUILD WITH INTENT.&quot;</p>
+                <p className="terminal-prompt terminal-build-prompt">$ echo &quot;LEARNING TO BUILD BETTER :)&quot;</p>
               </div>
               <div>
                 <div className="terminal-links-heading">
@@ -79,6 +78,8 @@ export default function Home() {
                   <a className="terminal-link" href={contactProfile.linkedIn} target="_blank" rel="noopener noreferrer">open linkedin</a>
                   <a className="terminal-link" href={`mailto:${contactProfile.email}`}>send email</a>
                   <a className="terminal-link" href="#projects">view projects</a>
+                  <a className="terminal-link" href={contactProfile.googleForDevelopers} target="_blank" rel="noopener noreferrer">view badges</a>
+                  <a className="terminal-link" href={contactProfile.certifications} target="_blank" rel="noopener noreferrer">view certifications</a>
                 </div>
               </div>
             </div>
@@ -88,16 +89,18 @@ export default function Home() {
             </div>
           </div>
           <div ref={signatureRef} className="footer-signature chamfered">
-            <video
-              src="/logo-signature.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              aria-label="Animated Amritansh Jaiswal logo signature"
-            />
-          </div>
+  <a href="#top" aria-label="Scroll to top">
+    <video
+      src="/logo-signature.mp4"
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      aria-label="Animated Amritansh Jaiswal logo signature"
+    />
+  </a>
+</div>
         </div>
       </footer>
     </>

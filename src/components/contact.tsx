@@ -20,10 +20,18 @@ export function Contact() {
     >
       <div className="section-heading">
         <Label tone="red">Contact</Label>
-        <p>
-          One clear route to the next conversation, with the verified profile
-          details and resume in reach.
-        </p>
+        <p className="contact-intro">
+  Have a project, opportunity, or just want to connect? Feel free to reach out:)
+  <a
+    href={contactProfile.linkedIn}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Open LinkedIn profile"
+    className="contact-linkedin"
+  >
+    <Linkedin />
+  </a>
+</p>
         <h2 id="contact-heading">
           LET&apos;S
           <br />
@@ -72,19 +80,6 @@ export function Contact() {
           </a>
           <a
             className="contact-detail"
-            href={contactProfile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github size={17} aria-hidden="true" />
-            <span>
-              <small>GITHUB</small>
-              {contactProfile.githubLabel}
-            </span>
-            <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
-          <a
-            className="contact-detail"
             href={contactProfile.linkedIn}
             target="_blank"
             rel="noopener noreferrer"
@@ -93,6 +88,19 @@ export function Contact() {
             <span>
               <small>LINKEDIN</small>
               {contactProfile.linkedInLabel}
+            </span>
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+          <a
+            className="contact-detail"
+            href={contactProfile.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github size={17} aria-hidden="true" />
+            <span>
+              <small>GITHUB</small>
+              {contactProfile.githubLabel}
             </span>
             <ArrowUpRight size={16} aria-hidden="true" />
           </a>

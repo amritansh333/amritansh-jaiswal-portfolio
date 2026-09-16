@@ -17,8 +17,7 @@ export function PortfolioSections() {
       <section className="section-shell profile-section" id="about" aria-labelledby="about-heading">
         <div className="section-heading">
           <Label tone="red">{aboutProfile.label}</Label>
-          <p>Identity, direction, and the working context behind the system.</p>
-          <h2 id="about-heading">BUILD<br /><span className="accent">USEFUL.</span></h2>
+          
         </div>
         <Divider label="01 / IDENTITY" />
         <div className="profile-grid">
@@ -39,9 +38,9 @@ export function PortfolioSections() {
 
       <section className="section-shell skills-section" id="skills" aria-labelledby="skills-heading">
         <div className="section-heading">
-          <Label tone="gold">Technical matrix</Label>
-          <p>Grouped by the kind of engineering work each tool enables.</p>
-          <h2 id="skills-heading">KNOW<br /><span className="accent">THE STACK.</span></h2>
+          <Label tone="gold">Skills</Label>
+          <p>Technologies I use across my projects, internships, and coursework.</p>
+          <h2 id="skills-heading">WHAT I<br /><span className="accent">WORK WITH?</span></h2>
         </div>
         <Divider label="02 / CAPABILITY MATRIX" />
         <div className="skills-grid">
@@ -68,7 +67,7 @@ export function PortfolioSections() {
       <section className="section-shell journey-section" id="experience" aria-labelledby="experience-heading">
         <div className="section-heading">
           <Label tone="red">Journey</Label>
-          <p>Internships, learning milestones, and signals of consistent practice.</p>
+          <p>Internships and training programs that have helped me gain hands-on experience.</p>
           <h2 id="experience-heading">MY<br /><span className="accent">EXPERIENCE.</span></h2>
         </div>
         <Divider label="03 / EXPERIENCE" />
@@ -102,7 +101,7 @@ export function PortfolioSections() {
                   </div>
                   <div className="education-meta">
                     <span>{item.period}</span>
-                    <strong>{item.result}</strong>
+                    {"result" in item && <strong>{item.result}</strong>}
                   </div>
                 </article>
               ))}
@@ -132,7 +131,7 @@ export function PortfolioSections() {
         <section className="achievement-section" id="achievements" aria-labelledby="achievements-heading">
           <div className="subsection-heading">
             <Label tone="red">Achievements</Label>
-            <h3 id="achievements-heading">SHOW<br /><span className="accent">UP.</span></h3>
+            <h3 id="achievements-heading">BEYOND<br /><span className="accent">CODE.</span></h3>
           </div>
           <div className="achievement-list">
             {achievements.map((item, index) => (

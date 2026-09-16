@@ -9,8 +9,10 @@ export function Showcase() {
       <div className="hero-grid">
         <div className="hero-copy">
           <p className="mono-note">ASPIRING SOFTWARE ENGINEER <span>{"//"}</span> FULL-STACK DEVELOPER</p>
-          <h1>BUILD<br /><em>WITH INTENT.</em></h1>
-          <p className="hero-intro">An engineering portfolio for <strong>Amritansh Jaiswal</strong> — where thoughtful systems meet expressive digital craft.</p>
+          <h1>LEARNING<br /><em>TO BUILD BETTER.</em></h1>
+          <p className="hero-intro">I&apos;m <strong>Amritansh Jaiswal</strong>, a B.Tech graduate and aspiring
+    Software Engineer. I enjoy building full-stack applications and
+    learning through hands-on projects.</p>
         </div>
         <div className="hero-aside">
           <div className="photo-frame">
@@ -28,7 +30,7 @@ export function Showcase() {
           <RoleTypewriter />
         </div>
         <div className="hero-actions">
-          <Button href="#about">Inspect profile</Button>
+          <Button href="#about">About me</Button>
           <Button href="#skills" variant="secondary">View skills</Button>
           <Button href="#contact" variant="secondary">Start a conversation</Button>
         </div>

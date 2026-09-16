@@ -1,6 +1,6 @@
 export const experience = [
   {
-    id: "EXP-01",
+    id: "Experience-01",
     role: "MERN Full Stack Developer Intern",
     organization: "EduSkills Academy",
     period: "Jan 2026 – Mar 2026",
@@ -10,7 +10,7 @@ export const experience = [
       "Worked with Context API, Redux Toolkit, reusable React components, Git, and SDLC practices. Developed full-stack projects including an E-commerce Platform and URL Shortener.",
   },
   {
-    id: "EXP-02",
+    id: "Experience-02",
     role: "Generative AI Virtual Intern",
     organization: "EduSkills | AICTE | Google Cloud",
     period: "Jul 2024 – Sep 2024",

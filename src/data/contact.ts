@@ -11,5 +11,5 @@ export const contactProfile = {
   resume: "/resume/Amritansh_Jaiswal_Resume.pdf",
   resumeDownloadName: "Amritansh_Jaiswal_Resume.pdf",
   availability:
-    "Open to relevant software engineering opportunities across full-stack and cloud-native teams.",
+    "I'm currently looking for software development opportunities where I can learn, contribute, and build real products with a team.",
 } as const;

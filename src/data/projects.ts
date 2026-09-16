@@ -13,7 +13,7 @@ export type Project = {
 
 export const projects: readonly Project[] = [
   {
-    id: "PRJ-01",
+    id: "Project-01",
     title: "AgencySphere",
     date: "June 2026",
     category: "Enterprise B2B marketplace",
@@ -29,10 +29,10 @@ export const projects: readonly Project[] = [
     ],
     status: "Production-ready platform",
     role: "Architected and developed",
-    featured: true,
+    featured: false,
   },
   {
-    id: "PRJ-02",
+    id: "Project-02",
     title: "PolyRib Industrial Products Platform",
     date: "March 2026",
     category: "Full-stack product catalog",
@@ -49,7 +49,7 @@ export const projects: readonly Project[] = [
     status: "Deployed and maintained",
   },
   {
-    id: "PRJ-03",
+    id: "Project-03",
     title: "Culinary Operations Manager",
     date: "January 2026",
     category: "Restaurant operations platform",
