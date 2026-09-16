@@ -1,12 +1,12 @@
 "use client";
 
-import { Monitor, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
 
 export function ThemeToggle() {
   const { preference, resolvedTheme, setPreference } = useTheme();
   const nextPreference = resolvedTheme === "dark" ? "light" : "dark";
-  const Icon = preference === "system" ? Monitor : resolvedTheme === "dark" ? Moon : Sun;
+  const Icon = preference === "system" ? Sun : resolvedTheme === "dark" ? Moon : Sun;
   const label = preference === "system" ? "System theme" : resolvedTheme === "dark" ? "Dark theme" : "Light theme";
 
   return (

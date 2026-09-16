@@ -1,5 +1,5 @@
 export const aboutProfile = {
-  label: "About / System profile",
+  label: "About",
   statement: "I build practical software that turns complex ideas into clear, usable systems.",
   description:
     "Software Engineer and Full-Stack Developer focused on thoughtful interfaces, dependable APIs, and product-minded engineering.",

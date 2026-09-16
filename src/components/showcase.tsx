@@ -8,7 +8,7 @@ export function Showcase() {
     <section className="hero section-shell" id="system">
       <div className="hero-grid">
         <div className="hero-copy">
-          <p className="mono-note">SOFTWARE ENGINEER <span>{"//"}</span> FULL-STACK DEVELOPER</p>
+          <p className="mono-note">ASPIRING SOFTWARE ENGINEER <span>{"//"}</span> FULL-STACK DEVELOPER</p>
           <h1>BUILD<br /><em>WITH INTENT.</em></h1>
           <p className="hero-intro">An engineering portfolio for <strong>Amritansh Jaiswal</strong> — where thoughtful systems meet expressive digital craft.</p>
         </div>
@@ -29,11 +29,11 @@ export function Showcase() {
         </div>
         <div className="hero-actions">
           <Button href="#about">Inspect profile</Button>
-          <Button href="#skills" variant="secondary">View capabilities</Button>
+          <Button href="#skills" variant="secondary">View skills</Button>
           <Button href="#contact" variant="secondary">Start a conversation</Button>
         </div>
       </div>
-      <div className="metadata-strip">{systemMetadata.map(([key, value, tone]) => <div className="meta-cell" key={key}><span>{key}</span><strong className={tone === "live" ? "status-live" : ""}>{tone === "live" && <i />} {value}</strong></div>)}</div>
+      {/* <div className="metadata-strip">{systemMetadata.map(([key, value, tone]) => <div className="meta-cell" key={key}><span>{key}</span><strong className={tone === "live" ? "status-live" : ""}>{tone === "live" && <i />} {value}</strong></div>)}</div> */}
     </section>
   );
 }

@@ -38,7 +38,7 @@ export function Navigation() {
       <nav id="primary-navigation" className={`nav-links ${open ? "nav-open" : ""}`} aria-label="Primary navigation">
         {navigation.map((item) => (
           <a href={item.href} key={item.label} onClick={() => setOpen(false)}>
-            <span>{item.index}</span>{item.label}
+            {item.label}
           </a>
         ))}
         <ThemeToggle />

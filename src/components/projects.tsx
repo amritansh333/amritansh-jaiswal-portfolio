@@ -6,9 +6,9 @@ export function Projects() {
   return (
     <section className="section-shell projects-section" id="projects" aria-labelledby="projects-heading">
       <div className="section-heading">
-        <Label tone="red">Selected work / Engineering record</Label>
+        <Label tone="red">Projects</Label>
         <p>Verified builds that show how I approach products, APIs, data, and delivery.</p>
-        <h2 id="projects-heading">SHIP<br /><span className="accent">USEFUL.</span></h2>
+        <h2 id="projects-heading">SHIPPED<br /><span className="accent">SYSTEMS.</span></h2>
       </div>
       <Divider label="04 / SELECTED WORK" />
       <div className="projects-list">

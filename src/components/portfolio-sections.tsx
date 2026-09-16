@@ -39,7 +39,7 @@ export function PortfolioSections() {
 
       <section className="section-shell skills-section" id="skills" aria-labelledby="skills-heading">
         <div className="section-heading">
-          <Label tone="gold">Capabilities / Technical matrix</Label>
+          <Label tone="gold">Technical matrix</Label>
           <p>Grouped by the kind of engineering work each tool enables.</p>
           <h2 id="skills-heading">KNOW<br /><span className="accent">THE STACK.</span></h2>
         </div>
@@ -67,9 +67,9 @@ export function PortfolioSections() {
 
       <section className="section-shell journey-section" id="experience" aria-labelledby="experience-heading">
         <div className="section-heading">
-          <Label tone="red">Journey / Verified record</Label>
+          <Label tone="red">Journey</Label>
           <p>Internships, learning milestones, and signals of consistent practice.</p>
-          <h2 id="experience-heading">BUILD<br /><span className="accent">THE RANGE.</span></h2>
+          <h2 id="experience-heading">MY<br /><span className="accent">EXPERIENCE.</span></h2>
         </div>
         <Divider label="03 / EXPERIENCE" />
         <div className="experience-list">
@@ -90,8 +90,8 @@ export function PortfolioSections() {
         <div className="record-grid">
           <section className="record-column" id="education" aria-labelledby="education-heading">
             <div className="subsection-heading">
-              <Label tone="gold">Education</Label>
-              <h3 id="education-heading">FOUNDATION<span className="accent">.</span></h3>
+              <Label tone="gold">Foundation</Label>
+              <h3 id="education-heading">EDUCATION<span className="accent">.</span></h3>
             </div>
             <div className="education-list">
               {education.map((item) => (
@@ -111,8 +111,8 @@ export function PortfolioSections() {
 
           <section className="record-column" id="certifications" aria-labelledby="certifications-heading">
             <div className="subsection-heading">
-              <Label tone="gold">Certifications / Training</Label>
-              <h3 id="certifications-heading">CREDENTIALS<span className="accent">.</span></h3>
+              <Label tone="gold">Training</Label>
+              <h3 id="certifications-heading">CERTIFICATIONS<span className="accent">.</span></h3>
             </div>
             <div className="certification-list">
               {certifications.map((item) => (
@@ -131,7 +131,7 @@ export function PortfolioSections() {
 
         <section className="achievement-section" id="achievements" aria-labelledby="achievements-heading">
           <div className="subsection-heading">
-            <Label tone="red">Achievements / Signals</Label>
+            <Label tone="red">Achievements</Label>
             <h3 id="achievements-heading">SHOW<br /><span className="accent">UP.</span></h3>
           </div>
           <div className="achievement-list">
