@@ -29,16 +29,25 @@ export const metadata: Metadata = {
   creator: "Amritansh Jaiswal",
   alternates: { canonical: "/" },
   openGraph: {
-    type: "website",
-    url: "/",
-    title: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
-    description:
-      "Portfolio of Amritansh Jaiswal, a Software Engineer and Full-Stack Developer building practical software with modern web technologies.",
-    siteName: "Amritansh Jaiswal",
-    locale: "en_IN",
-  },
+  type: "website",
+  url: "/",
+  title: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
+  description:
+    "Portfolio of Amritansh Jaiswal, a Software Engineer and Full-Stack Developer building practical software with modern web technologies.",
+  siteName: "Amritansh Jaiswal",
+  locale: "en_IN",
+  images: [
+    {
+      url: "/profile.jpeg",
+      width: 987,
+      height: 1280,
+      alt: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
+    },
+  ],
+},
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
+    images: ["/profile.jpeg"],
     title: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
     description:
       "Portfolio of Amritansh Jaiswal, a Software Engineer and Full-Stack Developer.",
