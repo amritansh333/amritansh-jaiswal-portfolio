@@ -12,6 +12,13 @@ import { Divider, Label, Panel } from "@/components/ui";
 const skillIcons = [Braces, Layers3, Server, Database, Smartphone, GitBranch];
 
 export function PortfolioSections() {
+    const openResume = () => {
+      window.open(
+        "/resume/Amritansh_Jaiswal_Resume.pdf",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    };
   return (
     <>
       <section className="section-shell profile-section" id="about" aria-labelledby="about-heading">
@@ -44,24 +51,56 @@ export function PortfolioSections() {
         </div>
         <Divider label="02 / CAPABILITY MATRIX" />
         <div className="skills-grid">
-          {skillGroups.map((group, index) => {
-            const Icon = skillIcons[index] ?? Radio;
-            return (
-              <Panel className="skill-group" key={group.id}>
-                <div className="skill-group-top">
-                  <span className="mono-note">{group.id}</span>
-                  <Icon size={20} strokeWidth={1.5} aria-hidden="true" />
-                </div>
-                <h3>{group.title}</h3>
-                <p className="skill-summary">{group.summary}</p>
-                <ul className="skill-list" aria-label={`${group.title} skills`}>
-                  {group.skills.map((skill) => <li key={skill}><Binary size={12} aria-hidden="true" />{skill}</li>)}
-                </ul>
-                <ArrowUpRight className="skill-arrow" size={17} aria-hidden="true" />
-              </Panel>
-            );
-          })}
-        </div>
+  {skillGroups.map((group, index) => {
+    const Icon = skillIcons[index] ?? Radio;
+
+    return (
+      <div
+        className="resume-click-card"
+        key={group.id}
+        role="link"
+        tabIndex={0}
+        onClick={openResume}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openResume();
+          }
+        }}
+        aria-label={`Open resume — ${group.title}`}
+      >
+        <Panel className="skill-group">
+          <div className="skill-group-top">
+            <span className="mono-note">{group.id}</span>
+            <Icon size={20} strokeWidth={1.5} aria-hidden="true" />
+          </div>
+
+          <h3>{group.title}</h3>
+
+          <p className="skill-summary">{group.summary}</p>
+
+          <ul
+            className="skill-list"
+            aria-label={`${group.title} skills`}
+          >
+            {group.skills.map((skill) => (
+              <li key={skill}>
+                <Binary size={12} aria-hidden="true" />
+                {skill}
+              </li>
+            ))}
+          </ul>
+
+          <ArrowUpRight
+            className="skill-arrow"
+            size={17}
+            aria-hidden="true"
+          />
+        </Panel>
+      </div>
+    );
+  })}
+</div>
       </section>
 
       <section className="section-shell journey-section" id="experience" aria-labelledby="experience-heading">
@@ -117,9 +156,25 @@ export function PortfolioSections() {
               {certifications.map((item) => (
                 <article className="certification-entry" key={item.title}>
                   <div className="certification-top">
-                    <h4>{item.title}</h4>
-                    <span className="record-period">{item.date}</span>
-                  </div>
+  <h4 className="certification-title">
+    <a
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`View ${item.title} certificate`}
+    >
+      {item.title}
+      <ArrowUpRight
+        className="certification-link-icon"
+        size={14}
+        strokeWidth={1.8}
+        aria-hidden="true"
+      />
+    </a>
+  </h4>
+
+  <span className="record-period">{item.date}</span>
+</div>
                   <p className="record-organization">{item.issuer}</p>
                   <p className="record-detail">{item.detail}</p>
                 </article>
@@ -134,14 +189,35 @@ export function PortfolioSections() {
             <h3 id="achievements-heading">BEYOND<br /><span className="accent">CODE.</span></h3>
           </div>
           <div className="achievement-list">
-            {achievements.map((item, index) => (
-              <Panel className="achievement-entry" key={item.title}>
-                <span className="mono-note">0{index + 1}</span>
-                <h4>{item.title}</h4>
-                <p>{item.detail}</p>
-              </Panel>
-            ))}
-          </div>
+  {achievements.map((item, index) => (
+    <div
+      className="resume-click-card"
+      key={item.title}
+      role="link"
+      tabIndex={0}
+      onClick={openResume}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openResume();
+        }
+      }}
+      aria-label={`Open resume — ${item.title}`}
+    >
+      <Panel className="achievement-entry">
+  <span className="mono-note">0{index + 1}</span>
+  <h4>{item.title}</h4>
+  <p>{item.detail}</p>
+
+  <ArrowUpRight
+    className="achievement-arrow"
+    size={17}
+    aria-hidden="true"
+  />
+</Panel>
+    </div>
+  ))}
+</div>
         </section>
       </section>
       <Projects />

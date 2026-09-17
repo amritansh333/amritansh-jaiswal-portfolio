@@ -2,37 +2,98 @@ export const skillGroups = [
   {
     id: "SKL-01",
     title: "Languages",
-    summary: "Languages I use for development, DSA, and working with data.",
-    skills: ["Java", "Python", "JavaScript ES6+", "TypeScript", "C", "SQL"],
+    summary:
+      "Languages I use for software development, problem solving, and working with data.",
+    skills: [
+      "Java",
+      "JavaScript ES6+",
+      "TypeScript",
+      "Python",
+      "C",
+      "SQL",
+    ],
   },
+
   {
     id: "SKL-02",
     title: "Frontend",
-    summary: "Tools I use to build responsive websites and reusable components.",
-    skills: ["React.js", "Next.js App Router", "Redux Toolkit", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"],
+    summary:
+      "Technologies I use to build responsive interfaces and reusable web applications.",
+    skills: [
+      "React.js",
+      "Next.js",
+      "HTML5",
+      "CSS3",
+      "React Router",
+      "Context API",
+      "Redux Toolkit",
+      "TailwindCSS",
+      "Bootstrap",
+    ],
   },
+
   {
     id: "SKL-03",
     title: "Backend / APIs",
-    summary: "Tools I use to build APIs, backend services, and authentication.",
-    skills: ["Node.js", "Express.js", "REST APIs", "Java OOP", "MVC Architecture", "JWT Authentication"],
+    summary:
+      "Technologies I use to build backend services, REST APIs, and authentication systems.",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Axios",
+      "MVC Architecture",
+      "JWT Authentication",
+    ],
   },
+
   {
     id: "SKL-04",
-    title: "Data",
-    summary: "Databases I've worked with while building full-stack applications.",
-    skills: ["MongoDB", "Mongoose", "MySQL", "DBMS", "Database Normalization", "Data Modeling"],
+    title: "Databases",
+    summary:
+      "Databases and data concepts I've worked with while building full-stack applications.",
+    skills: [
+      "MongoDB",
+      "Mongoose",
+      "MySQL",
+      "DBMS",
+      "Database Normalization",
+      "Data Modeling",
+    ],
   },
+
   {
     id: "SKL-05",
-    title: "Mobile / AI",
-    summary: "Technologies I've explored through Android, AI, and ML projects.",
-    skills: ["Kotlin", "Android", "Android Studio", "TensorFlow", "Machine Learning", "RAG / AI"],
+    title: "Cloud / DevOps",
+    summary:
+      "Platforms and practices I use for deployment and modern software development workflows.",
+    skills: [
+      "AWS",
+      "Google Cloud Platform",
+      "Microsoft Azure",
+      "Vercel",
+      "CI/CD Basics",
+      "SDLC",
+      "Agile",
+    ],
   },
+
   {
     id: "SKL-06",
-    title: "Tools / Platform",
-    summary: "Tools I use for development, testing, version control, and deployment.",
-    skills: ["Git", "GitHub", "Postman", "Vercel", "AWS EC2", "Google Cloud Platform", "Microsoft Azure"],
+    title: "AI / Tools",
+    summary:
+      "AI technologies, development tools, and engineering practices I've explored through projects and hands-on work.",
+    skills: [
+      "RAG",
+      "LangChain",
+      "LLMs",
+      "Hugging Face",
+      "Agentic AI",
+      "Gemini API",
+      "Git",
+      "GitHub",
+      "Postman",
+      "ESLint",
+    ],
   },
 ] as const;

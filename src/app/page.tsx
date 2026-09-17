@@ -55,7 +55,7 @@ export default function Home() {
               <div>
                 <p className="terminal-prompt">$ whoami</p>
                 <a href="#top" className="terminal-identity">amritansh jaiswal</a>
-                <p className="terminal-muted">software engineer // full-stack developer</p>
+                <p className="terminal-muted">software developer // full-stack developer</p>
                 <p className="terminal-prompt terminal-build-prompt">$ echo &quot;LEARNING TO BUILD BETTER :)&quot;</p>
               </div>
               <div>
@@ -79,7 +79,17 @@ export default function Home() {
                   <a className="terminal-link" href={`mailto:${contactProfile.email}`}>send email</a>
                   <a className="terminal-link" href="#projects">view projects</a>
                   <a className="terminal-link" href={contactProfile.googleForDevelopers} target="_blank" rel="noopener noreferrer">view badges</a>
-                  <a className="terminal-link" href={contactProfile.certifications} target="_blank" rel="noopener noreferrer">view certifications</a>
+                  <a className="terminal-link" href={contactProfile.certifications} target="_blank" rel="noopener noreferrer">
+  view certifications
+</a>
+<a
+  className="terminal-link"
+  href="/resume/Amritansh_Jaiswal_Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  view resume
+</a>
                 </div>
               </div>
             </div>

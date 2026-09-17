@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   title: {
-    default: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
+    default: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
     template: "%s | Amritansh Jaiswal",
   },
   description:
-    "Portfolio of Amritansh Jaiswal, a Software Engineer and Full-Stack Developer building practical software with React.js, Node.js, Java, and modern web technologies.",
+    "Portfolio of Amritansh Jaiswal, a Software Developer and Full-Stack Developer building practical software with React.js, Node.js, Java, and modern web technologies.",
   keywords: [
     "Amritansh Jaiswal",
-    "Software Engineer",
+    "Software Developer",
     "Full-Stack Developer",
     "React.js",
     "Node.js",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   openGraph: {
   type: "website",
   url: "/",
-  title: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
+  title: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
   description:
-    "Portfolio of Amritansh Jaiswal, a Software Engineer and Full-Stack Developer building practical software with modern web technologies.",
+    "Portfolio of Amritansh Jaiswal, a Software Developer and Full-Stack Developer building practical software with modern web technologies.",
   siteName: "Amritansh Jaiswal",
   locale: "en_IN",
   images: [
@@ -41,16 +41,16 @@ export const metadata: Metadata = {
       url: "/profile.jpeg",
       width: 987,
       height: 1280,
-      alt: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
+      alt: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
     },
   ],
 },
   twitter: {
     card: "summary_large_image",
     images: ["/profile.jpeg"],
-    title: "Amritansh Jaiswal — Software Engineer / Full-Stack Developer",
+    title: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
     description:
-      "Portfolio of Amritansh Jaiswal, a Software Engineer and Full-Stack Developer.",
+      "Portfolio of Amritansh Jaiswal, a Software Developer and Full-Stack Developer.",
   },
   robots: {
     index: true,
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@type": "Person",
     name: "Amritansh Jaiswal",
     url: "https://amritanshjaiswal.vercel.app/",
-    jobTitle: "Software Engineer / Full-Stack Developer",
+    jobTitle: "Software Developer / Full-Stack Developer",
     email: "mailto:amrit333.jswl@gmail.com",
     address: {
       "@type": "PostalAddress",

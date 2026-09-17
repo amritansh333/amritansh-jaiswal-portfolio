@@ -1,22 +1,34 @@
 export const experience = [
   {
     id: "Experience-01",
-    role: "MERN Full Stack Developer Intern",
+    role: "Full-Stack Developer Intern",
+    organization: "Vigyapanam Digi Solutions",
+    period: "Apr 2026 – Present",
+    summary:
+      "Contributed to client-facing web applications and end-to-end full-stack development across frontend, backend, APIs, database integration, and deployment.",
+    details:
+      "Implemented and maintained responsive React interfaces, reusable components, REST API integration, search/filter workflows, and MongoDB-backed data flows. Followed Agile sprints, Git workflows, and Core Web Vitals / SEO optimisation while debugging and refining production features.",
+  },
+
+  {
+    id: "Experience-02",
+    role: "Software Developer Intern",
+    organization: "W3Villa Technologies Pvt. Ltd.",
+    period: "Apr 2026 – May 2026",
+    summary:
+      "Completed hands-on software development training and built practice projects while strengthening programming, web development, APIs, Git, debugging, and professional development workflows.",
+    details:
+      "Worked through software engineering fundamentals, project implementation, problem solving and collaborative development practices.",
+  },
+
+  {
+    id: "Experience-03",
+    role: "MERN Full-Stack Developer Intern",
     organization: "EduSkills Academy",
     period: "Jan 2026 – Mar 2026",
     summary:
-      "Built and maintained RESTful APIs and backend services using Node.js, Express.js, MongoDB, and Mongoose. Designed responsive React.js UI and implemented JWT authentication and authorization.",
+      "Built and maintained RESTful APIs and backend services using Node.js, Express.js, MongoDB, and Mongoose. Designed responsive frontend UI with React.js and implemented authentication and authorization using JWT.",
     details:
-      "Worked with Context API, Redux Toolkit, reusable React components, Git, and SDLC practices. Developed full-stack projects including an E-commerce Platform and URL Shortener.",
-  },
-  {
-    id: "Experience-02",
-    role: "Generative AI Virtual Intern",
-    organization: "EduSkills | AICTE | Google Cloud",
-    period: "Jul 2024 – Sep 2024",
-    summary:
-      "Built 3+ AI-powered web applications using Vertex AI and Gemini LLMs, and worked on agentic AI use cases.",
-    details:
-      "Developed 2 interactive REST API and Streamlit dashboards. Iterative frontend refinement improved UI usability by 30%; task accuracy was 95% according to the resume.",
+      " Developed an E-commerce Platform and URL Shortener application following component-based architecture and REST API integration",
   },
 ] as const;

@@ -37,10 +37,16 @@ export function Navigation() {
       </button>
       <nav id="primary-navigation" className={`nav-links ${open ? "nav-open" : ""}`} aria-label="Primary navigation">
         {navigation.map((item) => (
-          <a href={item.href} key={item.label} onClick={() => setOpen(false)}>
-            {item.label}
-          </a>
-        ))}
+  <a
+    href={item.href}
+    key={item.label}
+    target={"external" in item && item.external ? "_blank" : undefined}
+    rel={"external" in item && item.external ? "noopener noreferrer" : undefined}
+    onClick={() => setOpen(false)}
+  >
+    {item.label}
+  </a>
+))}
         <ThemeToggle />
         <a className="button button-primary nav-contact" href="#contact" onClick={() => setOpen(false)}>Start a conversation</a>
       </nav>

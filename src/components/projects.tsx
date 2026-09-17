@@ -30,20 +30,59 @@ export function Projects() {
               <p className="project-description">{project.description}</p>
               {project.role && <p className="project-role"><span>ROLE</span>{project.role}</p>}
               <div className="project-details">
-                <div>
-                  <p className="project-detail-label">STACK</p>
-                  <ul className="project-stack" aria-label={`${project.title} technology stack`}>
-                    {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
-                  </ul>
-                </div>
-                <div>
-                  <p className="project-detail-label">CAPABILITIES</p>
-                  <ul className="project-features">
-                    {project.features.map((feature) => <li key={feature}><Binary size={12} aria-hidden="true" />{feature}</li>)}
-                  </ul>
-                </div>
-              </div>
-              <span className="project-arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>
+  <div>
+    <p className="project-detail-label">STACK</p>
+
+    <ul
+      className="project-stack"
+      aria-label={`${project.title} technology stack`}
+    >
+      {project.technologies.map((technology) => (
+        <li key={technology}>{technology}</li>
+      ))}
+    </ul>
+
+    {(project.github || project.live) && (
+      <div className="project-links" aria-label={`${project.title} links`}>
+        {project.github && (
+          <a
+            className="project-link"
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>
+        )}
+
+        {project.live && (
+          <a
+            className="project-link"
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live
+          </a>
+        )}
+      </div>
+    )}
+  </div>
+
+  <div>
+    <p className="project-detail-label">CAPABILITIES</p>
+
+    <ul className="project-features">
+      {project.features.map((feature) => (
+        <li key={feature}>
+          <Binary size={12} aria-hidden="true" />
+          {feature}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+              
             </div>
           </article>
         ))}

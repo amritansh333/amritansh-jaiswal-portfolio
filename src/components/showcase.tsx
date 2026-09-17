@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { systemMetadata } from "@/data/site";
 import { Button } from "@/components/ui";
 import { RoleTypewriter } from "@/components/role-typewriter";
 
@@ -8,10 +7,10 @@ export function Showcase() {
     <section className="hero section-shell" id="system">
       <div className="hero-grid">
         <div className="hero-copy">
-          <p className="mono-note">ASPIRING SOFTWARE ENGINEER <span>{"//"}</span> FULL-STACK DEVELOPER</p>
+          <p className="mono-note">SOFTWARE DEVELOPER <span>{"//"}</span> FULL-STACK DEVELOPER</p>
           <h1>LEARNING<br /><em>TO BUILD BETTER.</em></h1>
-          <p className="hero-intro">I&apos;m <strong>Amritansh Jaiswal</strong>, a B.Tech graduate and aspiring
-    Software Engineer. I enjoy building full-stack applications and
+          <p className="hero-intro">I&apos;m <strong>Amritansh Jaiswal</strong>, a B.Tech graduate and
+    Software Developer. I enjoy building full-stack applications and
     learning through hands-on projects.</p>
         </div>
         <div className="hero-aside">
@@ -31,7 +30,14 @@ export function Showcase() {
         </div>
         <div className="hero-actions">
           <Button href="#about">About me</Button>
-          <Button href="#skills" variant="secondary">View skills</Button>
+          <Button
+  href="/resume/Amritansh_Jaiswal_Resume.pdf"
+  variant="secondary"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View Resume
+</Button>
           <Button href="#contact" variant="secondary">Start a conversation</Button>
         </div>
       </div>

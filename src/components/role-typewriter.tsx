@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const roles = [
-  "Aspiring Software Engineer",
+  "Software Developer",
   "Full-Stack Developer",
   "AI/ML Enthusiast",
   "Web Developer",

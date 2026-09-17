@@ -139,7 +139,7 @@ h1 em { color: var(--accent-red); font-style: normal; }
 .skill-list { display: flex; flex-wrap: wrap; gap: .4rem .7rem; margin: 1.3rem 0 0; padding: 0; list-style: none; }
 .skill-list li { display: inline-flex; align-items: center; gap: .3rem; color: var(--foreground); font-family: var(--font-mono), monospace; font-size: .62rem; }
 .skill-list svg { color: var(--accent-red); flex: 0 0 auto; }
-.skill-arrow { position: absolute; right: 1.2rem; bottom: 1rem; color: var(--accent-red); }
+
 .journey-section { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); }
 .projects-section { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); }
 .contact-section { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 8vw, 7rem); }
@@ -153,7 +153,12 @@ h1 em { color: var(--accent-red); font-style: normal; }
 .contact-detail:last-child { border-bottom: 0; }
 .contact-detail:hover { color: var(--accent-amber); }
 .contact-detail > svg:first-child { color: var(--accent-red); }
-.contact-detail > svg:last-child { color: var(--muted); }
+.contact-detail > svg:last-child {
+  color: var(--accent-red);
+  transition:
+    transform var(--motion-fast) ease,
+    color var(--motion-fast) ease;
+}
 .contact-detail span { min-width: 0; overflow-wrap: anywhere; font-family: var(--font-mono), monospace; font-size: .72rem; }
 .contact-detail small { display: block; margin-bottom: .25rem; color: var(--muted); font-size: .56rem; }
 .projects-list { border-top: 1px solid var(--border-dark); }
@@ -263,3 +268,143 @@ h1 em { color: var(--accent-red); font-style: normal; }
 .certification-top .record-period { display: block; margin-top: .5rem; }
 .achievement-section .subsection-heading { display: block; }
 }
+
+.resume-click-card {
+  cursor: pointer;
+}
+
+.resume-click-card:focus-visible {
+  outline: 2px solid var(--accent, #ef4738);
+  outline-offset: 4px;
+}
+
+.resume-click-card:hover {
+  cursor: pointer;
+}
+
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid var(--accent-gold);
+  color: var(--background);
+  background: var(--accent-gold);
+  font-family: inherit;
+  font-size: 0.7rem;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.project-link:hover {
+  background: transparent;
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.project-link:focus-visible {
+  outline: 2px solid var(--accent-red);
+  outline-offset: 3px;
+}
+
+
+.certification-title a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.certification-link-icon {
+  color: var(--accent-red);
+  flex-shrink: 0;
+  transition:
+    transform var(--motion-fast) ease,
+    color var(--motion-fast) ease;
+}
+
+.certification-title a:hover .certification-link-icon {
+  transform: translate(3px, -3px);
+}
+
+.certification-title a:focus-visible .certification-link-icon {
+  transform: translate(3px, -3px);
+}
+
+.certification-title a:focus-visible {
+  outline: 2px solid var(--accent-red);
+  outline-offset: 3px;
+}
+
+.certification-title a:hover {
+  color: inherit;
+}
+
+
+.skill-arrow {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1rem;
+  color: var(--accent-red);
+  transition:
+    transform var(--motion-fast) ease,
+    color var(--motion-fast) ease;
+}
+
+.resume-click-card:hover .skill-arrow {
+  transform: translate(3px, -3px);
+}
+
+.resume-click-card:focus-visible .skill-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+.achievement-entry {
+  position: relative;
+  min-height: 12rem;
+  padding: 1.2rem;
+}
+
+.achievement-arrow {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1rem;
+  color: var(--accent-red);
+  transition:
+    transform var(--motion-fast) ease,
+    color var(--motion-fast) ease;
+}
+
+.resume-click-card:hover .achievement-arrow {
+  transform: translate(3px, -3px);
+}
+
+.resume-click-card:focus-visible .achievement-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+.contact-detail:hover > svg:last-child {
+  transform: translate(3px, -3px);
+  color: var(--accent-red);
+}
+
+.contact-detail:focus-visible > svg:last-child {
+  transform: translate(3px, -3px);
+}
+

@@ -1,8 +1,18 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from "react";
 
 type Tone = "neutral" | "red" | "gold" | "light";
 
-export function Label({ children, tone = "neutral" }: { children: ReactNode; tone?: Tone }) {
+export function Label({
+  children,
+  tone = "neutral",
+}: {
+  children: ReactNode;
+  tone?: Tone;
+}) {
   return <span className={`eyebrow eyebrow-${tone}`}>{children}</span>;
 }
 
@@ -25,7 +35,13 @@ export function Panel({
   className?: string;
   accent?: boolean;
 }) {
-  return <div className={`panel chamfered ${accent ? "panel-accent" : ""} ${className}`}>{children}</div>;
+  return (
+    <div
+      className={`panel chamfered ${accent ? "panel-accent" : ""} ${className}`}
+    >
+      {children}
+    </div>
+  );
 }
 
 export function Button({
@@ -33,15 +49,40 @@ export function Button({
   href,
   variant = "primary",
   className = "",
+  target,
+  rel,
   ...buttonProps
 }: {
   children: ReactNode;
   href?: string;
   variant?: "primary" | "secondary";
   className?: string;
+  target?: AnchorHTMLAttributes<HTMLAnchorElement>["target"];
+  rel?: AnchorHTMLAttributes<HTMLAnchorElement>["rel"];
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "children">) {
-  const content = <>{children}<span aria-hidden="true">↗</span></>;
-  return href
-    ? <a className={`button button-${variant} ${className}`} href={href}>{content}</a>
-    : <button className={`button button-${variant} ${className}`} type={buttonProps.type ?? "button"} {...buttonProps}>{content}</button>;
+  const content = (
+    <>
+      {children}
+      <span aria-hidden="true">↗</span>
+    </>
+  );
+
+  return href ? (
+    <a
+      className={`button button-${variant} ${className}`}
+      href={href}
+      target={target}
+      rel={rel}
+    >
+      {content}
+    </a>
+  ) : (
+    <button
+      className={`button button-${variant} ${className}`}
+      type={buttonProps.type ?? "button"}
+      {...buttonProps}
+    >
+      {content}
+    </button>
+  );
 }

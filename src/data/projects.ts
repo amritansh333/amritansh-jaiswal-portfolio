@@ -8,62 +8,96 @@ export type Project = {
   features: readonly string[];
   status: string;
   role?: string;
+  github?: string;
+  live?: string;
   featured?: boolean;
 };
 
 export const projects: readonly Project[] = [
   {
     id: "Project-01",
-    title: "AgencySphere",
-    date: "June 2026",
-    category: "Enterprise B2B marketplace",
-    description:
-      "A production-ready agency marketplace built around structured content, role-aware access, and an SEO-first delivery model.",
-    technologies: ["Next.js", "TypeScript", "Payload CMS", "MongoDB", "Node.js", "Elasticsearch"],
-    features: [
-      "Three user roles with RBAC",
-      "100+ CMS-managed fields",
-      "SSR, dynamic metadata, and canonical URLs",
-      "Schema.org, XML sitemaps, and Core Web Vitals optimization",
-      "Support for 1,000+ scalable dynamic listing pages",
-    ],
-    status: "Production-ready platform",
-    role: "Architected and developed",
-    featured: false,
-  },
-  {
-    id: "Project-02",
-    title: "PolyRib Industrial Products Platform",
-    date: "March 2026",
+    title: "Polyrib Industrial Products Platform",
+    date: "Aug 2026",
     category: "Full-stack product catalog",
     description:
-      "A responsive industrial product catalog that turns a multi-level inventory into a searchable, navigable buying experience.",
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      "A full-stack industrial product catalog with a structured product hierarchy, dynamic filtering, search functionality, and reusable React components.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
     features: [
       "Category → Subcategory → Brand → Product hierarchy",
-      "Dynamic filtering and search",
-      "REST API integration with Axios",
-      "Reusable React components and component-based architecture",
-      "Deployment and maintenance on Vercel",
+      "Dynamic filtering and search functionality",
+      "REST API integration using Axios",
+      "Reusable React components",
+      "Component-based architecture",
+      "Deployed and maintained on Vercel and Render",
     ],
     status: "Deployed and maintained",
+    role: "Full-stack development",
+    live: "https://khanna-polyrib-v2.vercel.app/",
+    featured: false,
   },
+
+  {
+    id: "Project-02",
+    title: "AgencySphere",
+    date: "Jul 2026",
+    category: "Enterprise B2B marketplace",
+    description:
+      "A B2B agency marketplace with role-based access, CMS-managed content, search, and REST APIs built with a modern Next.js architecture.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Payload CMS",
+      "MongoDB",
+      "Node.js",
+    ],
+    features: [
+      "Role-based access",
+      "CMS-managed content",
+      "Search functionality",
+      "REST APIs",
+      "SEO-first architecture",
+      "Server-side rendering and dynamic listing pages",
+      "Schema.org, XML sitemaps, and dynamic metadata",
+      "Modular architecture and reusable components",
+      "Secure authentication",
+    ],
+    status: "Full-stack application",
+    role: "Full-stack development",
+    github: "https://github.com/amritansh333/AgencySphere",
+    featured: false,
+  },
+
   {
     id: "Project-03",
     title: "Culinary Operations Manager",
-    date: "January 2026",
-    category: "Restaurant operations platform",
+    date: "Jun 2026",
+    category: "Restaurant management system",
     description:
-      "A full-stack restaurant management system focused on reliable CRUD workflows, access control, and normalized operational data.",
-    technologies: ["React.js", "Node.js", "Express.js", "MySQL"],
+      "A full-stack restaurant management system focused on responsive interfaces, CRUD operations, authentication, role-based access, and operational data management.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+    ],
     features: [
-      "Responsive UI with component-based architecture",
-      "JWT authentication and role-based access",
-      "Three user roles",
+      "Responsive user interface",
+      "CRUD operations",
+      "JWT authentication",
+      "Role-based access",
       "10+ RESTful API endpoints",
-      "Normalized MySQL schema for order and inventory management",
-      "Approximately 30% query-time reduction",
+      "Separation of concerns",
+      "Normalized MySQL schema",
+      "Order and inventory management",
     ],
     status: "Full-stack application",
+    role: "Full-stack development",
+    github: "https://github.com/amritansh333/culinary-operations-manager",
+    featured: false,
   },
 ] as const;
