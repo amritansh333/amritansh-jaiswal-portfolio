@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/next";
+
+import "../styles/globals.css";
 import { Navigation } from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -85,6 +87,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Navigation />
           {children}
         </ThemeProvider>
+        <Analytics />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       </body>
     </html>

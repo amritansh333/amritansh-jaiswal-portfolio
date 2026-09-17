@@ -1,4 +1,4 @@
-import { ArrowUpRight, Binary } from "lucide-react";
+import { Binary } from "lucide-react";
 import { projects } from "@/data/projects";
 import { Divider, Label } from "@/components/ui";
 
