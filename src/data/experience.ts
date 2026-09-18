@@ -16,9 +16,9 @@ export const experience = [
     organization: "W3Villa Technologies Pvt. Ltd.",
     period: "Apr 2026 – May 2026",
     summary:
-      "Completed hands-on software development training and built practice projects while strengthening programming, web development, APIs, Git, debugging, and professional development workflows.",
+      "Gained hands-on software development experience through projects involving programming, web development, APIs, Git and debugging.",
     details:
-      "Worked through software engineering fundamentals, project implementation, problem solving and collaborative development practices.",
+      "Applied software engineering fundamentals across project implementation, problem solving and collaborative development workflows.",
   },
 
   {

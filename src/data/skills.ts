@@ -55,6 +55,7 @@ export const skillGroups = [
     skills: [
       "MongoDB",
       "Mongoose",
+      "PostgreSQL",
       "MySQL",
       "DBMS",
       "Database Normalization",
@@ -72,6 +73,7 @@ export const skillGroups = [
       "Google Cloud Platform",
       "Microsoft Azure",
       "Vercel",
+      "Render",
       "CI/CD Basics",
       "SDLC",
       "Agile",
