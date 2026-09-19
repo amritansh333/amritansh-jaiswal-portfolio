@@ -1,6 +1,5 @@
 import {
   ArrowUpRight,
-  Download,
   FileText,
   Github,
   Globe2,
@@ -58,13 +57,6 @@ export function Contact() {
               rel="noopener noreferrer"
             >
               View Resume <FileText size={15} aria-hidden="true" />
-            </a>
-            <a
-              className="button button-secondary"
-              href={contactProfile.resume}
-              download={contactProfile.resumeDownloadName}
-            >
-              Download Resume <Download size={15} aria-hidden="true" />
             </a>
           </div>
         </div>

@@ -6,7 +6,7 @@ export const navigation = [
   { label: "Projects", href: "#projects", index: "05" },
   {
     label: "Resume",
-    href: "/resume/Amritansh_Jaiswal_Resume.pdf",
+    href: "https://drive.google.com/file/d/1xuDl-GW3JSw8vr9mOSn1jUQ3utt5Ig5a/view?usp=sharing",
     index: "06",
     external: true,
   },

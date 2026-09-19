@@ -31,7 +31,7 @@ export function Showcase() {
         <div className="hero-actions">
           <Button href="#about">About me</Button>
           <Button
-  href="/resume/Amritansh_Jaiswal_Resume.pdf"
+  href="https://drive.google.com/file/d/1xuDl-GW3JSw8vr9mOSn1jUQ3utt5Ig5a/view?usp=sharing"
   variant="secondary"
   target="_blank"
   rel="noopener noreferrer"

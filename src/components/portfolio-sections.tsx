@@ -14,7 +14,8 @@ const skillIcons = [Braces, Layers3, Server, Database, Smartphone, GitBranch];
 export function PortfolioSections() {
     const openResume = () => {
       window.open(
-        "/resume/Amritansh_Jaiswal_Resume.pdf",
+        //"/resume/Amritansh_Jaiswal_Resume.pdf",
+        "https://drive.google.com/file/d/1xuDl-GW3JSw8vr9mOSn1jUQ3utt5Ig5a/view?usp=sharing",
         "_blank",
         "noopener,noreferrer"
       );
