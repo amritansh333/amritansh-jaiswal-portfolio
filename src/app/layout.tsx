@@ -40,16 +40,16 @@ export const metadata: Metadata = {
   locale: "en_IN",
   images: [
     {
-      url: "/profile.jpeg",
-      width: 987,
-      height: 1280,
+      url: "/ogImage.jpeg",
+      width: 800,
+      height: 800,
       alt: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
     },
   ],
 },
   twitter: {
     card: "summary_large_image",
-    images: ["/profile.jpeg"],
+    images: ["/ogImage.jpeg"],
     title: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
     description:
       "Portfolio of Amritansh Jaiswal, a Software Developer and Full-Stack Developer.",
