@@ -19,7 +19,6 @@ export const achievements = [
 
   {
     title: "Runner-up · Samvad 2024 College Debate Competition",
-    detail:
-      "Competed among 50+ participants and finished as runner-up.",
+    detail: "Competed among 50+ participants and finished as runner-up.",
   },
 ] as const;

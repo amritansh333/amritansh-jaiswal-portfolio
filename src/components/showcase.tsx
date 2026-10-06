@@ -7,11 +7,21 @@ export function Showcase() {
     <section className="hero section-shell" id="system">
       <div className="hero-grid">
         <div className="hero-copy">
-          <p className="mono-note">SOFTWARE DEVELOPER <span>{"//"}</span> FULL-STACK DEVELOPER</p>
-          <h1>LEARNING<br /><em>TO BUILD BETTER.</em></h1>
-          <p className="hero-intro">I&apos;m <strong>Amritansh Jaiswal</strong>, a B.Tech graduate and
-    Software Developer. I enjoy building full-stack applications and
-    learning through hands-on projects.</p>
+          <p className="mono-note">
+            SOFTWARE DEVELOPER <span>{"//"}</span> FULL-STACK DEVELOPER
+          </p>
+
+          <h1>
+            LEARNING
+            <br />
+            <em>TO BUILD BETTER.</em>
+          </h1>
+
+          <p className="hero-intro">
+            I&apos;m <strong>Amritansh Jaiswal</strong>, a Software Developer
+            focused on full-stack applications, APIs, databases, and AI-powered
+            systems. I enjoy turning ideas into practical, reliable software.
+          </p>
         </div>
         <div className="hero-aside">
           <div className="photo-frame">
@@ -31,14 +41,16 @@ export function Showcase() {
         <div className="hero-actions">
           <Button href="#about">About me</Button>
           <Button
-  href="https://drive.google.com/file/d/1xuDl-GW3JSw8vr9mOSn1jUQ3utt5Ig5a/view?usp=sharing"
-  variant="secondary"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  View Resume
-</Button>
-          <Button href="#contact" variant="secondary">Start a conversation</Button>
+            href="https://drive.google.com/file/d/1a8N50tFwWLMGRO1byS-JPWZQ_-j2HnKm/view?usp=sharing"
+            variant="secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Resume
+          </Button>
+          <Button href="#contact" variant="secondary">
+            Start a conversation
+          </Button>
         </div>
       </div>
       {/* <div className="metadata-strip">{systemMetadata.map(([key, value, tone]) => <div className="meta-cell" key={key}><span>{key}</span><strong className={tone === "live" ? "status-live" : ""}>{tone === "live" && <i />} {value}</strong></div>)}</div> */}

@@ -6,9 +6,15 @@ export const aboutProfile = {
   modules: [
     { label: "ROLE", value: "Software Developer / Full-Stack Developer" },
     { label: "EDUCATION", value: "B.Tech Information Technology" },
-    { label: "INSTITUTION", value: "Axis Institute of Technology & Management / AKTU" },
+    {
+      label: "INSTITUTION",
+      value: "Axis Institute of Technology & Management / AKTU",
+    },
     { label: "STATUS", value: "Fresher / B.Tech Graduate" },
     { label: "LOCATION", value: "Kanpur, Uttar Pradesh, India" },
-    { label: "FOCUS", value: "Full-stack web development · AI / ML · responsive UI" },
+    {
+      label: "FOCUS",
+      value: "Full-stack web development · AI / ML · responsive UI",
+    },
   ],
 } as const;

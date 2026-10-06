@@ -6,7 +6,7 @@ export const navigation = [
   { label: "Projects", href: "#projects", index: "05" },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/1xuDl-GW3JSw8vr9mOSn1jUQ3utt5Ig5a/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1a8N50tFwWLMGRO1byS-JPWZQ_-j2HnKm/view?usp=sharing",
     index: "06",
     external: true,
   },

@@ -31,22 +31,22 @@ export const metadata: Metadata = {
   creator: "Amritansh Jaiswal",
   alternates: { canonical: "/" },
   openGraph: {
-  type: "website",
-  url: "/",
-  title: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
-  description:
-    "Portfolio of Amritansh Jaiswal, a Software Developer and Full-Stack Developer building practical software with modern web technologies.",
-  siteName: "Amritansh Jaiswal",
-  locale: "en_IN",
-  images: [
-    {
-      url: "/ogImage.jpeg",
-      width: 800,
-      height: 800,
-      alt: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
-    },
-  ],
-},
+    type: "website",
+    url: "/",
+    title: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
+    description:
+      "Portfolio of Amritansh Jaiswal, a Software Developer and Full-Stack Developer building practical software with modern web technologies.",
+    siteName: "Amritansh Jaiswal",
+    locale: "en_IN",
+    images: [
+      {
+        url: "/ogImage.jpeg",
+        width: 800,
+        height: 800,
+        alt: "Amritansh Jaiswal — Software Developer / Full-Stack Developer",
+      },
+    ],
+  },
   twitter: {
     card: "summary_large_image",
     images: ["/ogImage.jpeg"],
@@ -60,7 +60,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   const themeScript = `(() => { const stored = localStorage.getItem("portfolio-theme"); const preference = stored === "light" || stored === "dark" || stored === "system" ? stored : "system"; const theme = preference === "system" ? (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark") : preference; document.documentElement.dataset.theme = theme; })();`;
   const personSchema = {
     "@context": "https://schema.org",
@@ -81,14 +83,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
   return (
     <html lang="en" suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <ThemeProvider>
           <Navigation />
           {children}
         </ThemeProvider>
         <Analytics />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       </body>
     </html>
   );

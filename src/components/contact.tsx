@@ -6,6 +6,8 @@ import {
   Linkedin,
   Mail,
   BadgeCheck,
+  BookOpenCheck,
+  FileUser,
 } from "lucide-react";
 import { contactProfile } from "@/data/contact";
 import { Button, Divider, Label, Panel } from "@/components/ui";
@@ -20,17 +22,18 @@ export function Contact() {
       <div className="section-heading">
         <Label tone="red">Contact</Label>
         <p className="contact-intro">
-  Have a project, opportunity, or just want to connect? Feel free to reach out:)
-  <a
-    href={contactProfile.linkedIn}
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Open LinkedIn profile"
-    className="contact-linkedin"
-  >
-    <Linkedin />
-  </a>
-</p>
+          Have a project, opportunity, or just want to connect? Feel free to
+          reach out:)
+          <a
+            href={contactProfile.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open LinkedIn profile"
+            className="contact-linkedin"
+          >
+            <Linkedin />
+          </a>
+        </p>
         <h2 id="contact-heading">
           LET&apos;S
           <br />
@@ -119,6 +122,32 @@ export function Contact() {
             <span>
               <small>CERTIFICATIONS</small>
               {contactProfile.certificationsLabel}
+            </span>
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+          <a
+            className="contact-detail"
+            href={contactProfile.publications}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BookOpenCheck size={17} aria-hidden="true" />
+            <span>
+              <small>PUBLICATIONS</small>
+              {contactProfile.publicationsLabel}
+            </span>
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+          <a
+            className="contact-detail"
+            href={contactProfile.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FileUser size={17} aria-hidden="true" />
+            <span>
+              <small>RESUME</small>
+              {contactProfile.resumeLabel}
             </span>
             <ArrowUpRight size={16} aria-hidden="true" />
           </a>

@@ -1,4 +1,14 @@
-import { ArrowUpRight, Binary, Braces, Database, GitBranch, Layers3, Radio, Server, Smartphone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Binary,
+  Braces,
+  Database,
+  GitBranch,
+  Layers3,
+  Radio,
+  Server,
+  Smartphone,
+} from "lucide-react";
 import { aboutProfile } from "@/data/about";
 import { skillGroups } from "@/data/skills";
 import { achievements } from "@/data/achievements";
@@ -6,26 +16,30 @@ import { certifications } from "@/data/certifications";
 import { education } from "@/data/education";
 import { experience } from "@/data/experience";
 import { Projects } from "@/components/projects";
+import { Publications } from "@/components/publications";
 import { Contact } from "@/components/contact";
 import { Divider, Label, Panel } from "@/components/ui";
 
 const skillIcons = [Braces, Layers3, Server, Database, Smartphone, GitBranch];
 
 export function PortfolioSections() {
-    const openResume = () => {
-      window.open(
-        //"/resume/Amritansh_Jaiswal_Resume.pdf",
-        "https://drive.google.com/file/d/1xuDl-GW3JSw8vr9mOSn1jUQ3utt5Ig5a/view?usp=sharing",
-        "_blank",
-        "noopener,noreferrer"
-      );
-    };
+  const openResume = () => {
+    window.open(
+      //"/resume/Amritansh_Jaiswal_Resume.pdf",
+      "https://drive.google.com/file/d/1a8N50tFwWLMGRO1byS-JPWZQ_-j2HnKm/view?usp=sharing",
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
   return (
     <>
-      <section className="section-shell profile-section" id="about" aria-labelledby="about-heading">
+      <section
+        className="section-shell profile-section"
+        id="about"
+        aria-labelledby="about-heading"
+      >
         <div className="section-heading">
           <Label tone="red">{aboutProfile.label}</Label>
-          
         </div>
         <Divider label="01 / IDENTITY" />
         <div className="profile-grid">
@@ -44,71 +58,91 @@ export function PortfolioSections() {
         </div>
       </section>
 
-      <section className="section-shell skills-section" id="skills" aria-labelledby="skills-heading">
+      <section
+        className="section-shell skills-section"
+        id="skills"
+        aria-labelledby="skills-heading"
+      >
         <div className="section-heading">
           <Label tone="gold">Skills</Label>
-          <p>Technologies I use across my projects, internships, and coursework.</p>
-          <h2 id="skills-heading">WHAT I<br /><span className="accent">WORK WITH?</span></h2>
+          <p>
+            Technologies I use across my projects, internships, and coursework.
+          </p>
+          <h2 id="skills-heading">
+            WHAT I<br />
+            <span className="accent">WORK WITH?</span>
+          </h2>
         </div>
         <Divider label="02 / CAPABILITY MATRIX" />
         <div className="skills-grid">
-  {skillGroups.map((group, index) => {
-    const Icon = skillIcons[index] ?? Radio;
+          {skillGroups.map((group, index) => {
+            const Icon = skillIcons[index] ?? Radio;
 
-    return (
-      <div
-        className="resume-click-card"
-        key={group.id}
-        role="link"
-        tabIndex={0}
-        onClick={openResume}
-        onKeyDown={(event) => {
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            openResume();
-          }
-        }}
-        aria-label={`Open resume — ${group.title}`}
-      >
-        <Panel className="skill-group">
-          <div className="skill-group-top">
-            <span className="mono-note">{group.id}</span>
-            <Icon size={20} strokeWidth={1.5} aria-hidden="true" />
-          </div>
+            return (
+              <div
+                className="resume-click-card"
+                key={group.id}
+                role="link"
+                tabIndex={0}
+                onClick={openResume}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openResume();
+                  }
+                }}
+                aria-label={`Open resume — ${group.title}`}
+              >
+                <Panel className="skill-group">
+                  <div className="skill-group-top">
+                    <span className="mono-note">{group.id}</span>
+                    <Icon size={20} strokeWidth={1.5} aria-hidden="true" />
+                  </div>
 
-          <h3>{group.title}</h3>
+                  <h3>{group.title}</h3>
 
-          <p className="skill-summary">{group.summary}</p>
+                  <p className="skill-summary">{group.summary}</p>
 
-          <ul
-            className="skill-list"
-            aria-label={`${group.title} skills`}
-          >
-            {group.skills.map((skill) => (
-              <li key={skill}>
-                <Binary size={12} aria-hidden="true" />
-                {skill}
-              </li>
-            ))}
-          </ul>
+                  <ul
+                    className="skill-list"
+                    aria-label={`${group.title} skills`}
+                  >
+                    {group.skills.map((skill) => (
+                      <li key={skill}>
+                        <Binary size={12} aria-hidden="true" />
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
 
-          <ArrowUpRight
-            className="skill-arrow"
-            size={17}
-            aria-hidden="true"
-          />
-        </Panel>
-      </div>
-    );
-  })}
-</div>
+                  <ArrowUpRight
+                    className="skill-arrow"
+                    size={17}
+                    aria-hidden="true"
+                  />
+                </Panel>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
-      <section className="section-shell journey-section" id="experience" aria-labelledby="experience-heading">
+      <section
+        className="section-shell journey-section"
+        id="experience"
+        aria-labelledby="experience-heading"
+      >
         <div className="section-heading">
           <Label tone="red">Journey</Label>
-          <p>Internships and training programs that have helped me gain hands-on experience.</p>
-          <h2 id="experience-heading">MY<br /><span className="accent">EXPERIENCE.</span></h2>
+          <p>
+            Internships and training programs that have helped me gain hands-on
+            experience.
+          </p>
+          <h2 id="experience-heading">
+            MY
+            <br />
+            <span className="accent">EXPERIENCE.</span>
+          </h2>
         </div>
         <Divider label="03 / EXPERIENCE" />
         <div className="experience-list">
@@ -120,17 +154,23 @@ export function PortfolioSections() {
                 <h3>{item.role}</h3>
                 <p className="record-organization">{item.organization}</p>
                 <p className="record-summary">{item.summary}</p>
-                <p className="record-detail">{item.details}</p>
+                <p className="record-summary">{item.details}</p>
               </div>
             </article>
           ))}
         </div>
 
         <div className="record-grid">
-          <section className="record-column" id="education" aria-labelledby="education-heading">
+          <section
+            className="record-column"
+            id="education"
+            aria-labelledby="education-heading"
+          >
             <div className="subsection-heading">
               <Label tone="gold">Foundation</Label>
-              <h3 id="education-heading">EDUCATION<span className="accent">.</span></h3>
+              <h3 id="education-heading">
+                EDUCATION<span className="accent">.</span>
+              </h3>
             </div>
             <div className="education-list">
               {education.map((item) => (
@@ -148,34 +188,40 @@ export function PortfolioSections() {
             </div>
           </section>
 
-          <section className="record-column" id="certifications" aria-labelledby="certifications-heading">
+          <section
+            className="record-column"
+            id="certifications"
+            aria-labelledby="certifications-heading"
+          >
             <div className="subsection-heading">
               <Label tone="gold">Training</Label>
-              <h3 id="certifications-heading">CERTIFICATIONS<span className="accent">.</span></h3>
+              <h3 id="certifications-heading">
+                CERTIFICATIONS<span className="accent">.</span>
+              </h3>
             </div>
             <div className="certification-list">
               {certifications.map((item) => (
                 <article className="certification-entry" key={item.title}>
                   <div className="certification-top">
-  <h4 className="certification-title">
-    <a
-      href={item.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`View ${item.title} certificate`}
-    >
-      {item.title}
-      <ArrowUpRight
-        className="certification-link-icon"
-        size={14}
-        strokeWidth={1.8}
-        aria-hidden="true"
-      />
-    </a>
-  </h4>
+                    <h4 className="certification-title">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View ${item.title} certificate`}
+                      >
+                        {item.title}
+                        <ArrowUpRight
+                          className="certification-link-icon"
+                          size={14}
+                          strokeWidth={1.8}
+                          aria-hidden="true"
+                        />
+                      </a>
+                    </h4>
 
-  <span className="record-period">{item.date}</span>
-</div>
+                    <span className="record-period">{item.date}</span>
+                  </div>
                   <p className="record-organization">{item.issuer}</p>
                   <p className="record-detail">{item.detail}</p>
                 </article>
@@ -184,44 +230,53 @@ export function PortfolioSections() {
           </section>
         </div>
 
-        <section className="achievement-section" id="achievements" aria-labelledby="achievements-heading">
+        <section
+          className="achievement-section"
+          id="achievements"
+          aria-labelledby="achievements-heading"
+        >
           <div className="subsection-heading">
             <Label tone="red">Achievements</Label>
-            <h3 id="achievements-heading">BEYOND<br /><span className="accent">CODE.</span></h3>
+            <h3 id="achievements-heading">
+              BEYOND
+              <br />
+              <span className="accent">CODE.</span>
+            </h3>
           </div>
           <div className="achievement-list">
-  {achievements.map((item, index) => (
-    <div
-      className="resume-click-card"
-      key={item.title}
-      role="link"
-      tabIndex={0}
-      onClick={openResume}
-      onKeyDown={(event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openResume();
-        }
-      }}
-      aria-label={`Open resume — ${item.title}`}
-    >
-      <Panel className="achievement-entry">
-  <span className="mono-note">0{index + 1}</span>
-  <h4>{item.title}</h4>
-  <p>{item.detail}</p>
+            {achievements.map((item, index) => (
+              <div
+                className="resume-click-card"
+                key={item.title}
+                role="link"
+                tabIndex={0}
+                onClick={openResume}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openResume();
+                  }
+                }}
+                aria-label={`Open resume — ${item.title}`}
+              >
+                <Panel className="achievement-entry">
+                  <span className="mono-note">0{index + 1}</span>
+                  <h4>{item.title}</h4>
+                  <p>{item.detail}</p>
 
-  <ArrowUpRight
-    className="achievement-arrow"
-    size={17}
-    aria-hidden="true"
-  />
-</Panel>
-    </div>
-  ))}
-</div>
+                  <ArrowUpRight
+                    className="achievement-arrow"
+                    size={17}
+                    aria-hidden="true"
+                  />
+                </Panel>
+              </div>
+            ))}
+          </div>
         </section>
       </section>
       <Projects />
+      <Publications />
       <Contact />
     </>
   );

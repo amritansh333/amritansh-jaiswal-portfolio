@@ -12,8 +12,7 @@ export const certifications = [
     title: "Zscaler Zero Trust Cyber Associate",
     issuer: "Zscaler Academy",
     date: "May 2025",
-    detail:
-      "Certification covering Zero Trust and cybersecurity fundamentals.",
+    detail: "Certification covering Zero Trust and cybersecurity fundamentals.",
     link: "https://verify.skilljar.com/c/ovaiguaxiw37",
   },
 
@@ -30,8 +29,7 @@ export const certifications = [
     title: "Skill-Bridge Verbal & Professional Skills",
     issuer: "Crack-ED",
     date: "Dec 2024",
-    detail:
-      "Training focused on verbal, professional, and workplace skills.",
+    detail: "Training focused on verbal, professional, and workplace skills.",
     link: "https://drive.google.com/file/d/1cuZK8fGpuEc-ELGQ5v01Lz5KaTGApM05/view",
   },
 

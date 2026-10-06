@@ -16,7 +16,9 @@ export function RoleTypewriter() {
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduceMotion) {
       setVisibleText(roles[0]);
       setDeleting(false);
@@ -46,7 +48,10 @@ export function RoleTypewriter() {
 
   return (
     <p className="role-typewriter" aria-label={`Role: ${roles[roleIndex]}`}>
-      <span>{visibleText}</span><span className="typewriter-cursor" aria-hidden="true">|</span>
+      <span>{visibleText}</span>
+      <span className="typewriter-cursor" aria-hidden="true">
+        |
+      </span>
     </p>
   );
 }

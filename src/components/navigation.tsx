@@ -23,32 +23,52 @@ export function Navigation() {
         <span className="brand-mark chamfered">
           <Image src="/logo.png" alt="" width={36} height={36} priority />
         </span>
-        <span className="brand-name">AMRITANSH<br />JAISWAL</span>
+        <span className="brand-name">
+          AMRITANSH
+          <br />
+          JAISWAL
+        </span>
       </a>
       <button
         className="button button-secondary menu-toggle icon-button"
         type="button"
-        aria-label={open ? "Close primary navigation" : "Open primary navigation"}
+        aria-label={
+          open ? "Close primary navigation" : "Open primary navigation"
+        }
         aria-expanded={open}
         aria-controls="primary-navigation"
         onClick={() => setOpen(!open)}
       >
         {open ? <X size={18} /> : <Menu size={18} />}
       </button>
-      <nav id="primary-navigation" className={`nav-links ${open ? "nav-open" : ""}`} aria-label="Primary navigation">
+      <nav
+        id="primary-navigation"
+        className={`nav-links ${open ? "nav-open" : ""}`}
+        aria-label="Primary navigation"
+      >
         {navigation.map((item) => (
-  <a
-    href={item.href}
-    key={item.label}
-    target={"external" in item && item.external ? "_blank" : undefined}
-    rel={"external" in item && item.external ? "noopener noreferrer" : undefined}
-    onClick={() => setOpen(false)}
-  >
-    {item.label}
-  </a>
-))}
+          <a
+            href={item.href}
+            key={item.label}
+            target={"external" in item && item.external ? "_blank" : undefined}
+            rel={
+              "external" in item && item.external
+                ? "noopener noreferrer"
+                : undefined
+            }
+            onClick={() => setOpen(false)}
+          >
+            {item.label}
+          </a>
+        ))}
         <ThemeToggle />
-        <a className="button button-primary nav-contact" href="#contact" onClick={() => setOpen(false)}>Start a conversation</a>
+        <a
+          className="button button-primary nav-contact"
+          href="#contact"
+          onClick={() => setOpen(false)}
+        >
+          Start a conversation
+        </a>
       </nav>
     </header>
   );

@@ -4,14 +4,7 @@ export const skillGroups = [
     title: "Languages",
     summary:
       "Languages I use for software development, problem solving, and working with data.",
-    skills: [
-      "Java",
-      "JavaScript ES6+",
-      "TypeScript",
-      "Python",
-      "C",
-      "SQL",
-    ],
+    skills: ["Java", "JavaScript ES6+", "TypeScript", "Python", "C", "SQL"],
   },
 
   {

@@ -48,15 +48,25 @@ export default function Home() {
         <div className="footer-workspace">
           <div ref={terminalFooterRef} className="terminal-footer chamfered">
             <div className="terminal-footer-bar">
-              <span className="terminal-dots" aria-hidden="true"><i /><i /><i /></span>
+              <span className="terminal-dots" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
               <span>~:portfolio:~</span>
             </div>
             <div className="terminal-footer-body">
               <div>
                 <p className="terminal-prompt">$ whoami</p>
-                <a href="#top" className="terminal-identity">amritansh jaiswal</a>
-                <p className="terminal-muted">software developer // full-stack developer</p>
-                <p className="terminal-prompt terminal-build-prompt">$ echo &quot;LEARNING TO BUILD BETTER :)&quot;</p>
+                <a href="#top" className="terminal-identity">
+                  amritansh jaiswal
+                </a>
+                <p className="terminal-muted">
+                  software developer // full-stack developer
+                </p>
+                <p className="terminal-prompt terminal-build-prompt">
+                  $ echo &quot;LEARNING TO BUILD BETTER :)&quot;
+                </p>
               </div>
               <div>
                 <div className="terminal-links-heading">
@@ -67,51 +77,88 @@ export default function Home() {
                       className="scroll-top-button"
                       type="button"
                       aria-label="Scroll to top"
-                      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
                     >
                       ↑
                     </button>
                   </div>
                 </div>
                 <div className="terminal-links">
-                  <a className="terminal-link" href={contactProfile.github} target="_blank" rel="noopener noreferrer">open github</a>
-                  <a className="terminal-link" href={contactProfile.linkedIn} target="_blank" rel="noopener noreferrer">open linkedin</a>
-                  <a className="terminal-link" href={`mailto:${contactProfile.email}`}>send email</a>
-                  <a className="terminal-link" href="#projects">view projects</a>
-                  <a className="terminal-link" href={contactProfile.googleForDevelopers} target="_blank" rel="noopener noreferrer">view badges</a>
-                  <a className="terminal-link" href={contactProfile.certifications} target="_blank" rel="noopener noreferrer">
-  view certifications
-</a>
-<a
-  className="terminal-link"
-  //href="/resume/Amritansh_Jaiswal_Resume.pdf"
-  href="https://drive.google.com/file/d/1xuDl-GW3JSw8vr9mOSn1jUQ3utt5Ig5a/view?usp=sharing"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  view resume
-</a>
+                  <a
+                    className="terminal-link"
+                    href={contactProfile.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    open github
+                  </a>
+                  <a
+                    className="terminal-link"
+                    href={contactProfile.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    open linkedin
+                  </a>
+                  <a
+                    className="terminal-link"
+                    href={`mailto:${contactProfile.email}`}
+                  >
+                    send email
+                  </a>
+                  <a className="terminal-link" href="#projects">
+                    view projects
+                  </a>
+                  <a
+                    className="terminal-link"
+                    href={contactProfile.googleForDevelopers}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    view badges
+                  </a>
+                  <a
+                    className="terminal-link"
+                    href={contactProfile.certifications}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    view certifications
+                  </a>
+                  <a
+                    className="terminal-link"
+                    //href="/resume/Amritansh_Jaiswal_Resume.pdf"
+                    href="https://drive.google.com/file/d/1a8N50tFwWLMGRO1byS-JPWZQ_-j2HnKm/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    view resume
+                  </a>
                 </div>
               </div>
             </div>
             <div className="terminal-footer-bottom">
               <span>© 2026 Amritansh Jaiswal</span>
-              <span><span aria-hidden="true">🇮🇳</span> Kanpur, Uttar Pradesh, India</span>
+              <span>
+                <span aria-hidden="true">🇮🇳</span> Kanpur, Uttar Pradesh, India
+              </span>
             </div>
           </div>
           <div ref={signatureRef} className="footer-signature chamfered">
-  <a href="#top" aria-label="Scroll to top">
-    <video
-      src="/logo-signature.mp4"
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      aria-label="Animated Amritansh Jaiswal logo signature"
-    />
-  </a>
-</div>
+            <a href="#top" aria-label="Scroll to top">
+              <video
+                src="/logo-signature.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                aria-label="Animated Amritansh Jaiswal logo signature"
+              />
+            </a>
+          </div>
         </div>
       </footer>
     </>

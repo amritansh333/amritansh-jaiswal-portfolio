@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
 
 export type ThemePreference = "system" | "light" | "dark";
 
@@ -14,7 +21,9 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 function resolveTheme(preference: ThemePreference) {
   if (preference !== "system") return preference;
-  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  return window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
@@ -23,7 +32,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const stored = window.localStorage.getItem("portfolio-theme");
-    const nextPreference: ThemePreference = stored === "light" || stored === "dark" || stored === "system" ? stored : "system";
+    const nextPreference: ThemePreference =
+      stored === "light" || stored === "dark" || stored === "system"
+        ? stored
+        : "system";
     setPreferenceState(nextPreference);
   }, []);
 
@@ -41,17 +53,22 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     document.documentElement.dataset.theme = resolvedTheme;
   }, [resolvedTheme]);
 
-  const value = useMemo(() => ({
-    preference,
-    resolvedTheme,
-    setPreference: (nextPreference: ThemePreference) => {
-      window.localStorage.setItem("portfolio-theme", nextPreference);
-      setPreferenceState(nextPreference);
-      setResolvedTheme(resolveTheme(nextPreference));
-    },
-  }), [preference, resolvedTheme]);
+  const value = useMemo(
+    () => ({
+      preference,
+      resolvedTheme,
+      setPreference: (nextPreference: ThemePreference) => {
+        window.localStorage.setItem("portfolio-theme", nextPreference);
+        setPreferenceState(nextPreference);
+        setResolvedTheme(resolveTheme(nextPreference));
+      },
+    }),
+    [preference, resolvedTheme],
+  );
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
 
 export function useTheme() {
